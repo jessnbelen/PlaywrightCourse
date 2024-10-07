@@ -1,0 +1,29 @@
+{
+    "type": "object",
+    "properties": {
+      "sold": {
+        "type": "integer"
+      },
+      "Sold": {
+        "type": "integer"
+      },
+      "string": {
+        "type": "integer"
+      },
+      "superb": {
+        "type": "integer"
+      },
+      "pending": {
+        "type": "integer"
+      },
+      "available": {
+        "type": "integer"
+      },
+      "xyz": {
+        "type": "integer"
+      },
+      "status": {
+        "type": "integer"
+      }
+    }
+  }
