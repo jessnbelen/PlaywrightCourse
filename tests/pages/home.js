@@ -22,42 +22,10 @@ exports.Home = class Home{
         await this.page.getByRole("textbox" , {name: "Firstname"}).fill("Juan")
         await this.page.getByRole("textbox" , {name: "Lastname"}).fill("Perez")
         await this.page.locator('input[name="email"]').fill("juan@mailbooking.com")
-        //await this.page.getByRole("textbox" , {name: "phone"}).fill("01234567890")
         await this.page.locator('input[name="phone"]').fill("01234567890")
-
-        //await this.page.getByRole('cell').focus();
-        //await this.page.getByRole('cell',{name:'20'}).first().dragTo(this.page.getByRole('cell',{name:'21'}).first());
-
-        //var myPage = this.page;
-        //await myPage.getByRole('cell',{name:'20'}).first().dragTo(myPage.getByRole('cell',{name:'21'}).first());
-
-        //await page.locator('#item-to-be-dragged').dragTo(page.locator('#item-to-drop-at'));
-
-        //await this.page.frameLocator('iframe[title="reCAPTCHA"]').getByRole('checkbox').click()
-        
-        //await this.page.getByRole('cell',{name:'01'}).first().click()
-        //await this.page.getByRole('cell',{name:'15'}).first().click()
-        
-        //await this.page.click("//a[@class='rbc-button-link'][text()='02']")
-        //await this.page.click("//a[@class='rbc-button-link'][text()='05']")
-        
-        //await this.page.on('dialog', dialog => console.log(dialog.message()));
-        //await this.page.on('dialog', dialog => dialog.accept());
         await this.page.getByRole('button', { name: 'Book', exact: true }).click({force:true})
         await expect(this.page.locator('.alert')).toBeVisible()
-
-
-        
-        // Wait for the dynamic paragraph to appear
-        //const dynamicParagraphLocator = this.page.locator('no debe ser nulo'); // Adjust the selector as needed
-        // Wait for the paragraph to be visible
-       // await dynamicParagraphLocator.waitFor({ state: 'visible' });
-
-
-        //await expect(this.page.getByText('no debe ser nulo')).toBeVisible()
-        //await expect(this.page.locator('text="no debe ser nulo"')).toBeVisible()
-        
-
+  
     }
 
     // Metodo para completar el formulario de contacto
